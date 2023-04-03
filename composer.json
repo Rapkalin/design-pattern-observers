@@ -1,0 +1,26 @@
+{
+    "name": "r.kalinowski/design-pattern-observers",
+    "description": "A short code to see how observers work",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raphael Kalinowski",
+            "email": "r.kalinowski@mazarine.com"
+        }
+    ],
+
+    "require": {
+        "php": "^8.1",
+        "symfony/var-dumper": "^6.2",
+      "ext-pdo": "*"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}
