@@ -21,7 +21,7 @@ class Partner implements \SplObserver
     {
         // Send an e-mail to te client to inform him
         echo <<<HTML
-            <div class="notification">Sending a notification to the partner $this->code_id...<br> 
+            <div class="notification" style="visibility: hidden"> Sending a notification to the partner $this->code_id...<br> 
         Through the API to change its catalog with the new product price: $product->price euros <br></div>
         HTML;
     }

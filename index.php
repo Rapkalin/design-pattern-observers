@@ -28,7 +28,7 @@ if ($_POST) {
     else {
         echo
         <<<HTML
-            <div class="error">Woupsy! Merci de réessayer, il semble y avoir un problème avec l'input renseigné.</div>
+            <div id="error" style="visibility: hidden">Woupsy! Merci de réessayer, il semble y avoir un problème avec l'input renseigné.</div>
         HTML;
     }
 }
@@ -38,8 +38,8 @@ if ($_POST) {
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="src/Steel/style.scss">
         <script src="src/Steel/style.js" defer></script>
+        <link rel="stylesheet" href="src/Steel/style.scss">
     </head>
     <body>
         <div id="container">

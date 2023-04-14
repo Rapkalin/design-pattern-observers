@@ -22,7 +22,7 @@ class Client implements \SplObserver
 
         // Send an e-mail to te client to inform him
         echo <<<HTML
-            <div class="notification">Sending an email to the client $this->code_id...<br>
+            <div class="notification" style="visibility: hidden">Sending an email to the client $this->code_id...<br>
                  To warn him that the price has been updated: The new price is  $product->price euros<br></div>
         HTML;
     }

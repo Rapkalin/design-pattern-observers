@@ -69,6 +69,7 @@ form {
 }
 
 .notification {
+    visibility: hidden;
     padding: 16px 24px;
     font-family: system-ui;
     display: flex;
@@ -82,7 +83,7 @@ form {
     border: 2px solid #E7E7E7;
 }
 
-.error {
+#error {
     color: darkred;
     font-weight: bold;
 }
