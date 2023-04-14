@@ -2,42 +2,56 @@
 
 require 'vendor/autoload.php';
 
-use App\Client;
-use App\Product;
-use Config\SQLiteConnection;
+use App\Models\Client;
+use App\Models\Partner;
+use App\Models\Product;
 
-// DATABASE CONFIGURATION
-/*$pdo = (new SQLiteConnection())->connect();
-if ($pdo != null)
-  echo 'Connected to the SQLite database successfully!';
-else
-  echo 'Whoops, could not connect to the SQLite database!';*/
-
-//
+// Init product price
 $updatedPrice = 0;
-
-if ($_POST) // If form was submited...
-{
-  if (is_numeric($_POST["updatedPrice"])) {
-    $updatedPrice = strip_tags($_POST["updatedPrice"]);
-  } else {
-    throw new Exception('Merci de réessayer, il semble y avoir un problème avec l\'input renseigné.');
-  }
-
-}
 
 // Utilisation
 $product = new Product();
-$client1 = new Client();
-$client2 = new Client();
+$partner = new Partner('PARTNER-1');
+$client1 = new Client('CLIENT-1');
+$client2 = new Client('CLIENT-2');
 $product->attach($client1);
 $product->attach($client2);
-$product->fixPrice($updatedPrice);
+$product->attach($partner);
+$product->attach($client2);
+
+// If form was submited... Do something
+if ($_POST) {
+    if (is_numeric($_POST["updatedPrice"])) {
+        $updatedPrice = strip_tags($_POST["updatedPrice"]);
+        $product->fixPrice($updatedPrice);
+    }
+    else {
+        echo
+        <<<HTML
+            <div class="error">Woupsy! Merci de réessayer, il semble y avoir un problème avec l'input renseigné.</div>
+        HTML;
+    }
+}
 
 ?>
 
-<form method="post">
-  <textarea name="updatedPrice"></textarea>
-  <input type="submit" value="Go!" />
-</form>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="src/Steel/style.scss">
+        <script src="src/Steel/style.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <form method="post">
+                <textarea class="textarea" name="updatedPrice"></textarea>
+                <input class="btn btn-flat"  type="submit" value="Go!"/>
+            </form>
+        </div>
+
+        <button id="refreshButton" class="btn btn-flat-refresh" onClick="window.location.href=window.location.href" style="display: none">Refresh Page</button>
+
+    </body>
+</html>
+
 

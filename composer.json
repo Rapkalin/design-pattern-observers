@@ -3,8 +3,7 @@
     "description": "A short code to see how observers work",
     "autoload": {
         "psr-4": {
-            "App\\": "src/",
-            "Config\\": "config/"
+            "App\\": "src/"
         }
     },
     "authors": [
