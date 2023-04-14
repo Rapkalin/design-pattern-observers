@@ -44,8 +44,8 @@ if ($_POST) {
     <body>
         <div id="container">
             <form method="post">
-                <textarea class="textarea" name="updatedPrice"></textarea>
-                <input class="btn btn-flat"  type="submit" value="Go!"/>
+                <textarea placeholder="Enter a price" class="textarea" name="updatedPrice"></textarea>
+                <input  class="btn btn-flat"  type="submit" value="Go!"/>
             </form>
         </div>
 
