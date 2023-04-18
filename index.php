@@ -43,8 +43,8 @@ if ($_POST) {
     <body>
         <div id="container">
             <form method="post">
-                <textarea placeholder="Enter a price" class="textarea" name="updatedPrice"></textarea>
-                <input  class="btn btn-flat"  type="submit" value="Go!"/>
+                <input type="number" step="0.01" placeholder="Enter a price" class="textarea" name="updatedPrice">
+                <input  class="btn btn-flat"  type="submit" value="Go!">
             </form>
         </div>
 
