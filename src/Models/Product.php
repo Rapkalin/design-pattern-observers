@@ -36,6 +36,16 @@ class Product implements \SplSubject
     }
 
     /**
+     * @param \SplObserver $observer
+     *
+     * @return void
+     */
+    public function detach(SplObserver $observer): void
+    {
+        $this->observers->detach($observer);
+    }
+    
+    /**
      * @param int|float $price
      *
      * @return void
@@ -47,14 +57,5 @@ class Product implements \SplSubject
     }
 
 
-    /**
-     * @param \SplObserver $observer
-     *
-     * @return void
-     */
-    public function detach(SplObserver $observer): void
-    {
-        $this->observers->detach($observer);
-    }
 
 }
