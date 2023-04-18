@@ -1,5 +1,5 @@
 {
-    "name": "r.kalinowski/design-pattern-observers",
+    "name": "mazarine/design-pattern-observers",
     "description": "A short code to see how observers work",
     "autoload": {
         "psr-4": {
@@ -10,13 +10,17 @@
         {
             "name": "Raphael Kalinowski",
             "email": "r.kalinowski@mazarine.com"
+        },
+        {
+            "name": "Julien Schmitt",
+            "email": "j.schmitt@mazarine.com"
         }
     ],
 
     "require": {
         "php": "^8.1",
         "symfony/var-dumper": "^6.2",
-      "ext-pdo": "*"
+        "ext-pdo": "*"
     }
     ,
     "require-dev": {

@@ -17,7 +17,6 @@ $client2 = new Client('CLIENT-2');
 $product->attach($client1);
 $product->attach($client2);
 $product->attach($partner);
-$product->attach($client2);
 
 // If form was submited... Do something
 if ($_POST) {

@@ -8,7 +8,7 @@ if (notifications.length > 0) {
     notifications.forEach(notification => notification.style.setProperty('visibility','visible'));
     container.style.setProperty('display','none');
     refresh_button.style.setProperty('display','');
-} else {
-    console.log(error);
+} else if(error) {
+    console.log('error', error);
     error.style.setProperty('visibility','visible');
 }
